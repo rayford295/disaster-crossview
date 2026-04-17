@@ -1,0 +1,27 @@
+# Large image datasets — store locally or on HPC/cloud storage
+Eaton_Fire/
+Altadena_Images/
+
+# Archive backups
+*.zip
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Jupyter
+.jupyter/
+
+# IDE
+.vscode/
+.idea/
