@@ -1,0 +1,15 @@
+numpy
+pandas
+geopandas
+shapely
+rasterio
+pillow
+matplotlib
+seaborn
+folium
+scikit-learn
+torch
+torchvision
+transformers
+tqdm
+jupyterlab

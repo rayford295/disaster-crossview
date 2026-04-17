@@ -10,6 +10,19 @@ Altadena_Images/
 venv/
 env/
 
+# Generated data outputs (large files)
+data/*.csv
+data/*.geojson
+data/features/
+data/splits/
+
+# Generated figures
+outputs/
+
+# Keep placeholder files
+!data/.gitkeep
+!outputs/.gitkeep
+
 # macOS
 .DS_Store
 
