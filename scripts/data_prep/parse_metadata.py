@@ -17,12 +17,22 @@ import pandas as pd
 from pathlib import Path
 
 DAMAGE_CLASSES = {
-    "No_Damage":    0,
-    "Affected_1-9_": 1,
-    "Destroyed_50_": 2,
+    "No_Damage":      0,   # 0% structural loss
+    "Affected_1-9_":  1,   # 1–9% structural loss
+    "Minor_10-25_":   2,   # 10–25% structural loss
+    "Major_26-50_":   3,   # 26–50% structural loss
+    "Destroyed_50_":  4,   # >50% structural loss
+    "Inaccessible":   5,   # site could not be assessed
 }
 
-LABEL_NAMES = {0: "no_damage", 1: "affected", 2: "destroyed"}
+LABEL_NAMES = {
+    0: "no_damage",
+    1: "affected",
+    2: "minor",
+    3: "major",
+    4: "destroyed",
+    5: "inaccessible",
+}
 
 FILENAME_RE = re.compile(
     r"(?P<lat>-?[\d.]+)_(?P<lon>-?[\d.]+)_OID(?P<oid>\d+)_A(?P<aid>\d+)\.jpg",

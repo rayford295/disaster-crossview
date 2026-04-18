@@ -43,12 +43,17 @@ california wildfire/
 
 ### 1. Eaton_Fire — Labeled Damage Dataset
 
-| Category | Folder | Image Count | Damage Threshold |
+| Label | Folder | Image Count | Damage Threshold |
 |---|---|---|---|
-| No Damage | `No_Damage/attachments/` | 154 | 0% structural loss |
-| Affected | `Affected_1-9_/attachments/` | 27 | 1–9% structural loss |
-| Destroyed | `Destroyed_50_/attachments/` | 638 | ≥50% structural loss |
-| **Total** | | **819** | |
+| 0 — No Damage    | `No_Damage/attachments/`      | 4,336 | 0% structural loss |
+| 1 — Affected     | `Affected_1-9_/attachments/`  | 1,759 | 1–9% structural loss |
+| 2 — Minor        | `Minor_10-25_/attachments/`   |   312 | 10–25% structural loss |
+| 3 — Major        | `Major_26-50_/attachments/`   |   155 | 26–50% structural loss |
+| 4 — Destroyed    | `Destroyed_50_/attachments/`  | 4,413 | >50% structural loss |
+| 5 — Inaccessible | `Inaccessible/attachments/`   |    33 | Site could not be assessed |
+| **Total** | | **11,008** | |
+
+The 6-class schema follows the standard FEMA/California damage assessment grading used in official post-disaster inspections.
 
 **Image Naming Convention:**
 
@@ -224,15 +229,18 @@ plt.show()
 
 ## Dataset Statistics
 
-| Split | Count | % of Total |
-|---|---|---|
-| No Damage | 154 | 18.8% |
-| Affected (1–9%) | 27 | 3.3% |
-| Destroyed (≥50%) | 638 | 77.9% |
-| **Total (labeled)** | **819** | **100%** |
-| Unlabeled (Altadena) | 6,333 | — |
+| Class | Label | Count | % of Total |
+|---|---|---|---|
+| No Damage    | 0 | 4,336 | 39.4% |
+| Affected     | 1 | 1,759 | 16.0% |
+| Minor        | 2 |   312 |  2.8% |
+| Major        | 3 |   155 |  1.4% |
+| Destroyed    | 4 | 4,413 | 40.1% |
+| Inaccessible | 5 |    33 |  0.3% |
+| **Total (labeled)** | | **11,008** | **100%** |
+| Unlabeled (Altadena) | — | 6,333 | — |
 
-> The labeled set is **heavily imbalanced** toward the Destroyed class, reflecting the catastrophic scale of the Eaton Fire. Consider oversampling, class-weighted loss, or few-shot strategies for the Affected class.
+> The distribution is bimodal: No Damage and Destroyed together account for ~79% of the labeled set, reflecting the Eaton Fire's spatial pattern — neighborhoods were either mostly intact or completely devastated. The transitional classes (Minor, Major) are rare and may benefit from oversampling or class-weighted loss.
 
 ---
 
