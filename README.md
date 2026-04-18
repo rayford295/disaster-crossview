@@ -4,6 +4,32 @@ Codebase for building a reproducible wildfire damage assessment workflow around 
 
 This repository is now configured to keep the full project structure on GitHub while **excluding raw imagery, downloaded indexes, derived tables, and other bulky local artifacts**. That makes it safer for long-term development, collaboration, and future pushes.
 
+## Current Data Snapshot
+
+The counts below reflect the local dataset snapshot currently present in this project on April 17, 2026.
+
+### Labeled Eaton Fire Street-View Dataset
+
+| Class | Count | Share |
+|---|---:|---:|
+| No_Damage | 4,336 | 39.4% |
+| Affected_1-9_ | 1,759 | 16.0% |
+| Minor_10-25_ | 312 | 2.8% |
+| Major_26-50_ | 155 | 1.4% |
+| Destroyed_50_ | 4,413 | 40.1% |
+| Inaccessible | 33 | 0.3% |
+| **Total** | **11,008** | **100.0%** |
+
+### Unlabeled Altadena and Matching Status
+
+- Raw unlabeled Altadena street-view images: `6,333`
+- Rows in `Altadena_Images/Eaton_Fire_attachments_index.csv`: `19,780`
+- Sample folders under `Altadena_Images/Eaton_Fire_attachments_index_output/dataset/`: `6,333`
+- Samples with both `street_view.jpg` and `remote_sensing.jpg`: `6,148`
+- Incomplete sample folders still missing one modality: `185`
+
+At the moment, the local matching coverage is about **97.1%** (`6,148 / 6,333`) for the generated sample folders.
+
 ## What Is Versioned
 
 The repository is intended to track:
