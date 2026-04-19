@@ -1,4 +1,4 @@
-# 多灾种灾害影像数据集
+# disaster-crossview
 
 [English README](./README.md)
 
@@ -55,7 +55,7 @@
 - 本地分成 3 个类别目录：mild、moderate、severe
 - `Location.csv` 中包含坐标和人工损毁感知标签
 - 本地还包含 Horseshoe Beach 的城市边界 shapefile
-- 对应论文中报告的 benchmark 规模是 2,249 对 Hurricane Milton 灾前/灾后街景图像
+- 基于 Hurricane Milton 的 bi-temporal 街景论文数据
 
 详细说明见：[`Bi-temporal_hurricane/README_CN.md`](./Bi-temporal_hurricane/README_CN.md)
 
@@ -96,7 +96,7 @@ Li, H., Deuser, F., Yin, W., Luo, X., Walther, P., Mai, G., Huang, W., and Werne
 
 Yang, Y., Zou, L., Zhou, B., Li, D., Lin, B., Abedin, J., and Yang, M. (2025). *Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models*. *Computers, Environment and Urban Systems*, 116, 102335. [https://doi.org/10.1016/j.compenvurbsys.2025.102335](https://doi.org/10.1016/j.compenvurbsys.2025.102335)
 
-根据论文内容，文中 benchmark 数据集是 2024 Hurricane Milton 在 Florida 州 Horseshoe Beach 的 2,249 对灾前/灾后街景图像。你当前机器上的本地快照共有 2,556 个样本文件夹，所以这份本地数据看起来是论文公开基准数据的扩展版或后续版本。
+根据论文内容，这份数据基于 2024 Hurricane Milton 在 Florida 州 Horseshoe Beach 的灾前/灾后街景图像对。
 
 ## 仓库结构
 
@@ -134,11 +134,3 @@ Yang, Y., Zou, L., Zhou, B., Li, D., Lin, B., Abedin, J., and Yang, M. (2025). *
 - 生成的特征数组和元数据表
 - 生成的地图、图片和报告
 - 虚拟环境和压缩包
-
-## 推荐的新仓库名
-
-因为这个仓库现在已经不只是 Eaton Fire，而是同时包含 wildfire 和 hurricane 数据，更合适的新名字可以考虑：
-
-- `multimodal-disaster-datasets`
-- `disaster-crossview-datasets`
-- `disaster-vision-datasets`

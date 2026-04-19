@@ -82,12 +82,7 @@ This dataset should be attributed to:
 
 Yang, Y., Zou, L., Zhou, B., Li, D., Lin, B., Abedin, J., and Yang, M. (2025). *Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models*. *Computers, Environment and Urban Systems*, 116, 102335. [https://doi.org/10.1016/j.compenvurbsys.2025.102335](https://doi.org/10.1016/j.compenvurbsys.2025.102335)
 
-The article states that the published benchmark dataset contains 2,249 pre- and post-disaster street-view image pairs collected before and after 2024 Hurricane Milton in Horseshoe Beach, Florida.
-
-Inference from the local files:
-
-- the local snapshot currently present on your machine contains 2,556 paired sample folders, which is larger than the 2,249 pairs described in the paper
-- this suggests the local copy is likely an expanded or later derivative of the published benchmark
+The article describes a bi-temporal street-view dataset collected before and after 2024 Hurricane Milton in Horseshoe Beach, Florida.
 
 ## Repository note
 

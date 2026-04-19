@@ -82,12 +82,7 @@ Bi-temporal_hurricane/
 
 Yang, Y., Zou, L., Zhou, B., Li, D., Lin, B., Abedin, J., and Yang, M. (2025). *Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models*. *Computers, Environment and Urban Systems*, 116, 102335. [https://doi.org/10.1016/j.compenvurbsys.2025.102335](https://doi.org/10.1016/j.compenvurbsys.2025.102335)
 
-论文中说明，公开 benchmark 数据集包含 2024 Hurricane Milton 在 Florida 州 Horseshoe Beach 的 2,249 对灾前/灾后街景图像。
-
-根据当前本地文件可以推断：
-
-- 你机器上的这份本地快照目前共有 2,556 个配对样本文件夹，比论文中的 2,249 对更多
-- 这说明你当前这份本地数据很可能是论文基准数据的扩展版或后续版本
+论文说明，这份数据基于 2024 Hurricane Milton 在 Florida 州 Horseshoe Beach 的灾前/灾后街景图像对。
 
 ## 仓库说明
 

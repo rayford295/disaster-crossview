@@ -1,4 +1,4 @@
-# Multimodal Disaster Datasets
+# disaster-crossview
 
 [中文说明](./README_CN.md)
 
@@ -55,6 +55,7 @@ A bi-temporal street-view disaster dataset built from pre- and post-hurricane im
 - three local class folders: mild, moderate, and severe
 - `Location.csv` includes coordinates and human damage perception labels
 - local files also include a Horseshoe Beach city boundary shapefile
+- based on the Hurricane Milton bi-temporal street-view paper
 
 Detailed notes: [`Bi-temporal_hurricane/README.md`](./Bi-temporal_hurricane/README.md)
 
@@ -95,6 +96,7 @@ The `Bi-temporal_hurricane/` dataset should be attributed to:
 
 Yang, Y., Zou, L., Zhou, B., Li, D., Lin, B., Abedin, J., and Yang, M. (2025). *Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models*. *Computers, Environment and Urban Systems*, 116, 102335. [https://doi.org/10.1016/j.compenvurbsys.2025.102335](https://doi.org/10.1016/j.compenvurbsys.2025.102335)
 
+According to the article, the dataset is based on pre- and post-disaster street-view image pairs collected before and after 2024 Hurricane Milton in Horseshoe Beach, Florida.
 ## Repository layout
 
 ```text
@@ -131,11 +133,3 @@ Kept local and ignored by Git:
 - generated feature arrays and metadata tables
 - generated maps, figures, and reports
 - virtual environments and archive files
-
-## Suggested future repo name
-
-Because the repository now spans both wildfire and hurricane datasets, a clearer future GitHub name would be something like:
-
-- `multimodal-disaster-datasets`
-- `disaster-crossview-datasets`
-- `disaster-vision-datasets`
