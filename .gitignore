@@ -72,3 +72,20 @@ IAN_hurricane/**/*.csv
 !IAN_hurricane/README.md
 !IAN_hurricane/README_CN.md
 !IAN_hurricane/**/.gitkeep
+
+# Bi-temporal hurricane street-view imagery and local metadata
+Bi-temporal_hurricane/**/*.jpg
+Bi-temporal_hurricane/**/*.jpeg
+Bi-temporal_hurricane/**/*.png
+Bi-temporal_hurricane/**/*.csv
+Bi-temporal_hurricane/**/*.shp
+Bi-temporal_hurricane/**/*.shx
+Bi-temporal_hurricane/**/*.dbf
+Bi-temporal_hurricane/**/*.prj
+Bi-temporal_hurricane/**/*.cpg
+Bi-temporal_hurricane/**/*.sbn
+Bi-temporal_hurricane/**/*.sbx
+Bi-temporal_hurricane/**/*.xml
+!Bi-temporal_hurricane/README.md
+!Bi-temporal_hurricane/README_CN.md
+!Bi-temporal_hurricane/**/.gitkeep

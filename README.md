@@ -47,6 +47,18 @@ A Hurricane Ian cross-view dataset of paired satellite and street-view imagery.
 
 Detailed notes: [`IAN_hurricane/README.md`](./IAN_hurricane/README.md)
 
+### `Bi-temporal_hurricane/`
+
+A bi-temporal street-view disaster dataset built from pre- and post-hurricane image pairs.
+
+- current local snapshot: 2,556 paired sample folders and 5,112 image files
+- three local class folders: mild, moderate, and severe
+- `Location.csv` includes coordinates and human damage perception labels
+- local files also include a Horseshoe Beach city boundary shapefile
+- source paper reports a benchmark dataset of 2,249 pre/post-disaster pairs for Hurricane Milton
+
+Detailed notes: [`Bi-temporal_hurricane/README.md`](./Bi-temporal_hurricane/README.md)
+
 ## Quick summary
 
 | Dataset | Structure | Scale | Coordinates |
@@ -54,6 +66,7 @@ Detailed notes: [`IAN_hurricane/README.md`](./IAN_hurricane/README.md)
 | `Eaton_Fire/` | class-organized street-view attachments | 18,428 points / 19,780 images | yes |
 | `Altadena_Images/` | sample-organized street-view plus remote-sensing pairs | 19,780 samples / 19,746 complete pairs | yes |
 | `IAN_hurricane/` | paired satellite plus street-view images | 4,121 pairs / 8,242 images | no |
+| `Bi-temporal_hurricane/` | paired pre/post street-view samples | 2,556 pairs / 5,112 images | yes |
 
 ## Current code status
 
@@ -67,6 +80,8 @@ The scripts in `scripts/` are still primarily written for the Eaton Fire and Alt
 
 The Hurricane Ian dataset is now documented and reserved in the repository structure, but it is not yet wired into the current Eaton-specific preprocessing scripts because its schema is pair-based and the provided CSV files do not include coordinates.
 
+The bi-temporal hurricane dataset is also documented in the repository structure, but it is not yet integrated into the current scripts because its organization is pair-folder based and differs from the Eaton Fire and Altadena formats.
+
 ## Hurricane Ian source and attribution
 
 The `IAN_hurricane/` dataset should be attributed to the Hurricane Ian cross-view dataset described in:
@@ -74,6 +89,14 @@ The `IAN_hurricane/` dataset should be attributed to the Hurricane Ian cross-vie
 Li, H., Deuser, F., Yin, W., Luo, X., Walther, P., Mai, G., Huang, W., and Werner, M. (2025). *Cross-view geolocalization and disaster mapping with street-view and VHR satellite imagery: A case study of Hurricane IAN*. *ISPRS Journal of Photogrammetry and Remote Sensing*, 220, 841-854. [https://doi.org/10.1016/j.isprsjprs.2025.01.003](https://doi.org/10.1016/j.isprsjprs.2025.01.003)
 
 Based on the publication metadata, the paper introduces a novel Hurricane Ian cross-view dataset named `CVIAN` and reports that its data and code are publicly available through the related CVDisaster project.
+
+## Bi-temporal hurricane source and attribution
+
+The `Bi-temporal_hurricane/` dataset should be attributed to:
+
+Yang, Y., Zou, L., Zhou, B., Li, D., Lin, B., Abedin, J., and Yang, M. (2025). *Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models*. *Computers, Environment and Urban Systems*, 116, 102335. [https://doi.org/10.1016/j.compenvurbsys.2025.102335](https://doi.org/10.1016/j.compenvurbsys.2025.102335)
+
+According to the article, the benchmark dataset in the paper consists of 2,249 pre- and post-disaster street-view image pairs collected before and after 2024 Hurricane Milton in Horseshoe Beach, Florida. The current local snapshot on your machine contains 2,556 paired sample folders, so this local copy appears to be an expanded or later derivative of the published benchmark.
 
 ## Repository layout
 
@@ -85,6 +108,7 @@ Based on the publication metadata, the paper introduces a novel Hurricane Ian cr
 |-- Eaton_Fire/
 |-- Altadena_Images/
 |-- IAN_hurricane/
+|-- Bi-temporal_hurricane/
 |-- scripts/
 |   |-- data_prep/
 |   |-- features/
