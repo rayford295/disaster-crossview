@@ -30,9 +30,26 @@ The sample-organized paired dataset derived from the Eaton Fire attachment index
 - 19,780 sample folders
 - 19,746 complete `street_view.jpg` plus `remote_sensing.jpg` pairs
 - 91 GeoTIFF tiles and 91 `.aux.xml` sidecars in the local raster source folder
+- new pre-disaster wildfire remote-sensing mosaic: `pre_disaster_svi.tif` kept locally
+- 13,397 valid local triplets combining pre-disaster remote sensing, post-disaster remote sensing, and street view
 - coordinates retained in the generated paired index files
 
 Detailed notes: [`Altadena_Images/README.md`](./Altadena_Images/README.md)
+
+Pre-disaster remote-sensing preview:
+
+![Altadena pre-disaster remote-sensing preview](./docs/assets/altadena_pre_disaster_svi_preview.jpg)
+
+The full source GeoTIFF is a local, unversioned RGB mosaic for the Altadena wildfire
+study area. It is `50,176 x 50,176` pixels at approximately `0.305 m` resolution
+in WGS 84 / UTM zone 11N. The image above is a lightweight center-crop preview
+created for GitHub documentation.
+
+The local triplet folder is generated under
+`Eaton_Fire_attachments_index_output/triplet_dataset/` by
+`scripts/data_prep/build_altadena_triplet_dataset.py`. Each retained sample has:
+`pre_disaster_remote_sensing.jpg`, `post_disaster_remote_sensing.jpg`, and
+`street_view.jpg`.
 
 ### `IAN_hurricane/`
 
@@ -84,7 +101,7 @@ Current local path example:
 | Dataset | Structure | Scale | Coordinates |
 | --- | --- | --- | --- |
 | `Eaton_Fire/` | class-organized street-view attachments | 18,428 points / 19,780 images | yes |
-| `Altadena_Images/` | sample-organized street-view plus remote-sensing pairs | 19,780 samples / 19,746 complete pairs | yes |
+| `Altadena_Images/` | sample-organized street-view plus remote-sensing pairs, with local pre-disaster wildfire mosaic and valid triplets | 19,780 samples / 19,746 complete post-disaster pairs / 13,397 valid triplets | yes |
 | `IAN_hurricane/` | paired satellite plus street-view images | 4,121 pairs / 8,242 images | no |
 | `Bi-temporal_hurricane/` | paired pre/post street-view samples | 2,556 pairs / 5,112 images | yes |
 | `SAGINDisaster/` | paired remote-sensing plus volunteered ground images | 2,080 pairs / 4,160 images | yes |
@@ -224,4 +241,3 @@ This mapping keeps the task close to a real response question: **does this prope
 - This repository's code and repository-authored documentation are licensed under Apache-2.0. The underlying datasets, imagery, and third-party source materials are not relicensed by this repository and remain subject to their own terms.
 - Raw imagery and large generated artifacts remain local and are ignored by Git.
 - The current models are meant to be solid baselines and scaffolding for a paper, not the final research claim.
->>>>>>> 1c93b7e (Document local SAGINDisaster benchmark inventory)

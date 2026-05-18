@@ -30,9 +30,25 @@
 - 19,780 个 sample 文件夹
 - 其中 19,746 个是完整的 `street_view.jpg` 和 `remote_sensing.jpg` 配对
 - 本地遥感源目录中有 91 个 GeoTIFF 和 91 个 `.aux.xml`
+- 新增灾前山火遥感镶嵌图：`pre_disaster_svi.tif`，原始大文件保留在本地
+- 已生成 13,397 个有效本地 triplet：灾前遥感、灾后遥感、灾后街景三图配对
 - 生成的配对索引表中保留了坐标信息
 
 详细说明见：[`Altadena_Images/README.md`](./Altadena_Images/README.md)
+
+灾前遥感图像预览：
+
+![Altadena 灾前遥感图像预览](./docs/assets/altadena_pre_disaster_svi_preview.jpg)
+
+完整 GeoTIFF 是 Altadena 山火研究区的本地 RGB 灾前遥感镶嵌图，不纳入 Git
+版本管理。它的尺寸为 `50,176 x 50,176` 像素，空间分辨率约为 `0.305 m`，
+坐标系为 WGS 84 / UTM zone 11N。上图是为 GitHub 介绍页生成的轻量中心裁剪预览。
+
+新的三图数据集位于本地
+`Eaton_Fire_attachments_index_output/triplet_dataset/`，由
+`scripts/data_prep/build_altadena_triplet_dataset.py` 生成。每个保留的样本文件夹中包含
+`pre_disaster_remote_sensing.jpg`、`post_disaster_remote_sensing.jpg` 和
+`street_view.jpg`。
 
 ### `IAN_hurricane/`
 
@@ -64,7 +80,7 @@
 | 数据集 | 组织方式 | 规模 | 是否有坐标 |
 | --- | --- | --- | --- |
 | `Eaton_Fire/` | 按类别组织的街景附件 | 18,428 points / 19,780 images | 有 |
-| `Altadena_Images/` | 按 sample 组织的街景 + 遥感配对 | 19,780 samples / 19,746 完整配对 | 有 |
+| `Altadena_Images/` | 按 sample 组织的街景 + 遥感配对，并包含本地灾前山火遥感镶嵌图和有效 triplet | 19,780 samples / 19,746 灾后完整配对 / 13,397 有效 triplets | 有 |
 | `IAN_hurricane/` | 卫星图 + 街景图配对 | 4,121 pairs / 8,242 images | 没有 |
 | `Bi-temporal_hurricane/` | 灾前/灾后街景配对样本 | 2,556 pairs / 5,112 images | 有 |
 
